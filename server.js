@@ -1,3 +1,5 @@
+//sending request to server
+
 const http=require('http');
 http.createServer( (req,resp)=>{
 resp.write('<h1>my name is faizan abbasi</h1>');
