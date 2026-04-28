@@ -14,4 +14,5 @@ http.createServer((req,resp)=>{
                 </body>
         </html>`);
     resp.end();
+    process.exit();
 }).listen(4900);
