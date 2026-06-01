@@ -18,9 +18,9 @@ const server=http.createServer((req,res)=>{
             res.write(data)
         }
         else if(req.url=='/submit'){
-           
+        
             res.write('<h1>data is submitted</h1>');
-             
+            res.write('<h1>data is submitted</h1>');
         }
         res.end();
     });
