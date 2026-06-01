@@ -1,7 +1,6 @@
 //imprting http module to create a server and fs module to read the html file//
 const http=require('http');
 const fs=require('fs');
-const { text } = require('stream/consumers');
 
 const server=http.createServer((req,res)=>{
     fs.readFile('html/form.html','utf-8',(err,data)=>{
@@ -13,6 +12,7 @@ const server=http.createServer((req,res)=>{
             return;
         }  
          res.writeHead(200,{'content-type':'text/html'});
+        
         if(req.url==='/'){
             res.writeHead(200,{'content-type':'text/html'});
             res.write(data)
@@ -25,4 +25,4 @@ const server=http.createServer((req,res)=>{
         res.end();
     });
 });
-server.listen(2300);
+server.listen(2000);
